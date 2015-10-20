@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" 
+    android:background="@color/White">
+
+    <ListView
+        android:id="@+id/m_old_stuff_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+      />
+
+    <TextView
+        android:id="@+id/noresult_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="No Result Found"
+        android:textColor="@color/Green"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:visibility="gone"
+           />
+
+</RelativeLayout>

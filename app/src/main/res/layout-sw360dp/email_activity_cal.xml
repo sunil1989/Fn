@@ -1,0 +1,407 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+ 
+    tools:context="com.life.event.EventActivity" >
+
+    <!-- android:paddingTop="@dimen/activity_vertical_margin" -->
+<View
+    android:layout_below="@+id/complete_calender_layout"
+    
+      
+      
+    android:layout_width="fill_parent"
+    android:layout_height="0.5dp"
+android:layout_alignParentTop="true"
+    android:background="@color/Green"
+    /> 
+     <ScrollView 
+           android:id="@+id/complete_calender_layout"
+       
+               android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   
+        >
+    <LinearLayout
+  
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+         android:layout_marginTop="15dp"
+           android:paddingLeft="25dp"
+    android:paddingRight="25dp" >
+
+<!--         <RelativeLayout
+            android:id="@+id/start_end_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/calender_layout"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp" >
+
+            <TextView
+                android:id="@+id/start_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:text="Start"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/Green" /> 
+
+            <TextView
+                android:id="@+id/end_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="End"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/Gray" />
+        </RelativeLayout> -->
+
+        <LinearLayout
+            android:id="@+id/calender_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/start_end_layout"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/lightgray"
+            android:orientation="vertical" >
+
+            <!--
+     <Button
+        android:id="@+id/selectedDayMonthYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/calendar_top_header"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FFFFFF" >
+    </Button>
+            -->
+
+            <LinearLayout
+                android:id="@+id/buttonlayout"
+                android:layout_width="fill_parent"
+                android:layout_height="30sp"
+                android:layout_marginTop="5dp"
+                android:gravity="left|top"
+                android:height="30sp"
+                android:orientation="horizontal" >
+
+                <!-- android:background="@drawable/topbar" -->
+ <LinearLayout   android:layout_width="30dp"
+            android:layout_height="30dp"
+              android:layout_gravity="center"
+          android:id="@+id/prevMonth"
+            android:gravity="center"
+            android:layout_marginLeft="10sp"
+                
+            >
+                <ImageView
+                  
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                 
+                    android:src="@drawable/calendar_left_arrow_selector" >
+                </ImageView>
+</LinearLayout>
+                <TextView
+                    android:id="@+id/currentMonth"
+                    android:layout_width="fill_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="0.6"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/Green" >
+                </TextView>
+<LinearLayout   android:layout_width="30dp"
+            android:layout_height="30dp"
+              android:layout_gravity="center"
+             android:id="@+id/nextMonth"
+            android:gravity="center"
+                
+            >
+                <ImageView
+                
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+               
+                    android:src="@drawable/calendar_right_arrow_selector" >
+                </ImageView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" >
+
+                <ImageView
+                    android:id="@+id/calendarheader"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/calendar_days_new" >
+                </ImageView>
+            </LinearLayout>
+
+            <GridView
+               
+                android:id="@+id/calendar"
+                android:layout_width="270dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                android:numColumns="7"
+                  android:listSelector="@color/Green"
+        android:choiceMode="singleChoice"
+                android:paddingLeft="15dp" >
+            </GridView>
+        </LinearLayout>
+
+        <!-- complete Time Layout -->
+
+        <LinearLayout
+            android:id="@+id/complete_time_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal" >
+
+            <!-- Hour Layout Begin -->
+
+            <LinearLayout
+                android:id="@+id/hour_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="5dp" >
+
+                <LinearLayout
+                    android:id="@+id/time_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/event_hour_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:gravity="center"
+                        android:text="00"
+                         android:maxLength="2"
+                           android:ems="1"
+                            android:textCursorDrawable="@drawable/cursor"
+                        android:background="@null"
+                         android:inputType="numberDecimal"
+                        android:textColor="@color/Gray"
+                        android:textSize="50sp" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="2dp"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/event_hour_up"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/event_clock_toggle_up" >
+                    </ImageView>
+
+                    <ImageView
+                        android:id="@+id/event_hour_down"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/event_clock_toggle_down" >
+                    </ImageView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Hour Layout End -->
+
+            <ImageView
+                android:id="@+id/event_break"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/event_break" >
+            </ImageView>
+            <!-- Minute Layout Begin -->
+
+            <LinearLayout
+                android:id="@+id/minute_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/minute_time_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/event_minute_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:text="00"
+                        android:background="@null"
+                         android:maxLength="2"
+                           android:ems="1"
+                            android:textCursorDrawable="@drawable/cursor"
+                         android:inputType="numberDecimal"
+                        android:textColor="@color/Gray"
+                        android:textSize="50sp" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                     android:layout_marginLeft="2dp"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/event_minute_up"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/event_clock_toggle_up" >
+                    </ImageView>
+
+                    <ImageView
+                        android:id="@+id/event_minute_down"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/event_clock_toggle_down" >
+                    </ImageView>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- Minute Layout end -->
+
+
+            <!-- am pm Layout begin -->
+
+            <LinearLayout
+                android:id="@+id/am_time_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="0dp" />
+
+                <TextView
+                    android:id="@+id/event_am_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:text="am"
+                    android:textColor="@color/Gray"
+                    android:textSize="20sp" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/slash_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="1dp"
+                    android:text="/"
+                    android:textColor="@color/Gray"
+                    android:textSize="20sp" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/event_pm_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:text="pm"
+                    android:textColor="@color/Gray"
+                    android:textSize="20sp" >
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/reminder_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/complete_time_layout"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:weightSum="3"
+             android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/auto_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="{auto send}"
+                android:textColor="@color/Gray"
+                android:textSize="18sp" 
+               >
+            </TextView>
+
+            <TextView
+                android:id="@+id/remind_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="{remind me}"
+                android:textColor="@color/Gray"
+                android:textSize="18sp" >
+            </TextView>
+        </LinearLayout>
+      
+    </LinearLayout>
+    </ScrollView>
+<View
+    android:layout_below="@+id/complete_calender_layout"
+    
+        android:layout_marginTop="5dp"
+      
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+
+    android:background="@color/Green"
+    /> 
+</RelativeLayout>

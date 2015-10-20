@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:id="@+id/dialog_layout" 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:layout_gravity="center" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/event_recording_pop_up_background"
+        android:orientation="vertical"
+        android:gravity="center" >
+        <ImageView
+                android:layout_gravity="right"
+                android:id="@+id/delete_recording_img1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+               android:layout_marginRight="75dp"
+               android:padding="10dp"
+                android:src="@drawable/delet" />
+      <ImageView      
+          android:id="@+id/start_recording_img"
+          android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/event_record_button"/>
+   
+      <View  android:layout_width="140dp"
+        android:layout_height="20dp"/>
+            <TextView    
+                  android:id="@+id/recording_text"
+                  android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="press to record"
+       android:textSize="18sp"
+        android:textColor="#FFFFFF"/>
+       
+            <LinearLayout 
+                android:id="@+id/save_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+<LinearLayout 
+    
+    android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center" 
+                android:layout_marginTop="20dp">
+            <ImageView
+                android:id="@+id/start_play_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+             
+               
+                android:src="@drawable/event_play_button"
+                android:padding="10dp" />
+            <!--  <ImageView
+                android:id="@+id/seekbar_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_marginLeft="10dp"
+                android:src="@drawable/event_play_status" /> -->
+                    <!-- <View
+    android:layout_width="120dp"
+    android:layout_height="2dp"
+    
+    android:background="#FFFFFF"
+   /> -->
+       <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+      />
+          <TextView    
+                  android:id="@+id/recording_total_time_text"
+                  android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="0:00"
+       android:textSize="10sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="10dp"/>
+          
+           <ImageView
+                android:id="@+id/delete_recording_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+               android:padding="10dp"
+                android:src="@drawable/event_awith_delete" />
+            </LinearLayout>
+        <LinearLayout 
+    android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center" 
+                android:layout_marginTop="10dp">
+          
+          <TextView    
+                  android:id="@+id/cancel_recording_text"
+                  android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="{cancel}"
+      android:textSize="18sp"
+        android:textColor="#FFFFFF"
+      
+      
+        />
+          <View android:layout_width="20dp"
+              android:layout_height="0dp"/>
+           <TextView    
+                  android:id="@+id/save_recording_text"
+                  android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="{add}"
+     android:textSize="18sp"
+        android:textColor="#FFFFFF"
+   
+        />
+           
+            </LinearLayout>
+                      <ImageView
+        android:id="@+id/share_audio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:padding="5dp"
+    android:layout_marginLeft="10dp"
+        android:src="@android:drawable/ic_menu_share"
+        android:visibility="gone" />
+        </LinearLayout>
+
+       </LinearLayout>
+
+</RelativeLayout>

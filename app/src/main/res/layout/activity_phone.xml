@@ -1,0 +1,319 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:focusableInTouchMode="true"
+   >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/event_save_text"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+              android:layout_marginTop="10dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                 android:paddingLeft="23dp"
+        android:paddingRight="23dp">
+
+          <AutoCompleteTextView
+                    android:id="@+id/contact_auto_complete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="Enter Phone Number"
+                    android:textSize="18sp"
+                    android:textColor="@color/Gray"
+                    android:textColorHint="@color/Gray" >
+
+                    </AutoCompleteTextView> 
+                           
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/Green" />
+
+                <ListView
+                    android:id="@+id/mContact_Listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Complete layout when , where, with,slice -->
+   
+            <LinearLayout
+                android:id="@+id/complete_layout_wwws"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_layout2"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp" >
+                
+                  <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/Gray" />
+                
+                <LinearLayout
+                    android:id="@+id/notes_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_layout4"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                      >
+
+                    <ImageView
+                        android:id="@+id/notes_plus_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/plus"
+                        android:text="when"
+                      />
+
+                    <TextView
+                    android:id="@+id/phone_notes_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="notes"
+                        android:textColor="@color/Gray"
+                       android:textSize="18sp" />
+                </LinearLayout>
+
+             
+
+                <LinearLayout
+                    android:id="@+id/inner_notes_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                  
+             
+                     >
+<View
+    
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/Green" />
+                    <EditText
+                        android:id="@+id/notes_editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:background="@null"
+                        android:ems="10"
+                        
+                        android:hint="What to discuss..."
+                        android:lines="6"
+                        android:gravity="top"
+                        android:paddingBottom="2dp"
+                        android:layout_marginTop="10dp"
+                          android:layout_marginLeft="@dimen/left_inner_margin"
+                    android:layout_marginRight="@dimen/right_inner_margin"
+                        android:textColor="@color/Gray"
+                        android:textColorHint="@color/Gray" >
+
+                       
+                        
+                        
+                    </EditText>
+<View
+    
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/Green" />
+                </LinearLayout>
+<View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/Gray" />
+                <LinearLayout
+                    android:id="@+id/when_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                     
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/when_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/plus"
+                
+                        />
+
+                    <TextView
+                         android:id="@+id/phone_when_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="when"
+                        android:textColor="@color/Gray"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_layout4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/when_layout"
+                    android:background="@android:color/darker_gray" />
+                <!-- includde Calender Layout begin  First Gone -->
+
+                <include
+                    android:id="@+id/complete_calender_layout"
+                    layout="@layout/email_activity_cal"
+                    android:visibility="gone"
+                     />
+                <!-- includde Calender Layout end  First Gone -->
+
+               
+
+
+                
+
+               
+
+                <LinearLayout
+                    android:id="@+id/where_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:orientation="horizontal" 
+                    >
+
+                    <ImageView
+                        android:id="@+id/where_plus_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/plus" />
+
+                    <TextView
+                                 android:id="@+id/phone_where_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="where"
+                        android:textColor="@color/Gray"
+                        android:textSize="18sp" />
+                </LinearLayout>
+                  <View
+                   
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/when_layout"
+                    android:background="@android:color/darker_gray" />
+
+                <include
+                    android:id="@+id/email_where"
+                    layout="@layout/email_phone_where_layout"
+                    android:visibility="gone" />
+            </LinearLayout>
+            
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom layout -->
+    <!-- Bottom layout -->
+    
+    <TextView
+    android:id="@+id/share_notes"
+    
+       android:gravity="center"
+           android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        
+
+ android:layout_marginBottom="5dp"
+ android:layout_gravity="bottom"
+ android:textColor="@color/Gray"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+ android:layout_above="@+id/view_layout7"
+ android:layout_toLeftOf="@+id/event_complete_text"
+
+            android:text="{Share}" 
+         >
+        </TextView>
+   <TextView
+    android:id="@+id/event_complete_text"
+    
+       android:gravity="center"
+           android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        
+    android:layout_marginLeft="20dp"
+ android:layout_marginBottom="5dp"
+ android:layout_gravity="bottom"
+ android:textColor="@color/Gray"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+ android:layout_above="@+id/view_layout7"
+ android:layout_toLeftOf="@+id/event_save_text"
+            android:text="{Complete}"
+          >
+        </TextView>
+    <TextView
+        android:id="@+id/event_save_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view_layout7"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom"
+          android:layout_marginLeft="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="{Save}"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/Gray" >
+    </TextView>
+
+    <View
+        android:id="@+id/view_layout7"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@+id/bottom_layout"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+       
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/activity_horizontal_margin" >
+
+        <ImageView
+            android:id="@+id/priority_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:paddingTop="8dp"
+            android:paddingLeft="20dp"
+            android:src="@drawable/event_importance_none" />
+
+        <ImageView
+            android:id="@+id/alarm_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:src="@drawable/event_reminder_active" />
+    </LinearLayout>
+
+</RelativeLayout>

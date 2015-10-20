@@ -1,0 +1,488 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.life_reminder.FacesActivity"
+    android:focusableInTouchMode="true"
+    android:background="@color/White">
+
+<!--     <LinearLayout 
+        android:id="@+id/face_toplayout"
+            android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@drawable/faces_main_picture_area_background"
+    android:gravity="center"
+    android:weightSum="4"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_marginBottom="20dp">
+    <ImageView
+            android:id="@+id/event_camera_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/faces_add_photo_icon"
+            android:layout_weight="1" 
+            android:layout_gravity="bottom"/>
+
+        <ImageView
+            android:id="@+id/capture_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/faces_male_photo_icon"
+            android:layout_weight="1" />
+ 
+           <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/faces_icon_shape" 
+             android:layout_weight="1"/>
+        
+         <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/faces_add_photo_icon"
+            android:layout_weight="1" 
+            android:layout_gravity="bottom"
+            android:visibility="invisible"/>
+        </LinearLayout> -->
+ <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+   android:layout_alignParentTop="true"
+       android:layout_above="@+id/event_save_text"> 
+        <LinearLayout
+        android:id="@+id/toplayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:orientation="vertical"
+         > 
+             <LinearLayout 
+        android:id="@+id/face_toplayout"
+            android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@drawable/faces_main_picture_area_background"
+    android:gravity="center"
+    android:weightSum="4"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_marginBottom="20dp">
+    <ImageView
+            android:id="@+id/event_camera_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/faces_add_photo_icon"
+            android:layout_weight="1" 
+            android:layout_gravity="bottom"/>
+
+        <ImageView
+            android:id="@+id/graphic_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:src="@drawable/face"
+            android:layout_weight="1" />
+ 
+           <ImageView
+            android:id="@+id/capture_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:src="@drawable/faces_icon_shape" 
+             android:layout_weight="1"/>
+           
+        
+         <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/faces_add_photo_icon"
+            android:layout_weight="1" 
+            android:layout_gravity="bottom"
+            android:visibility="invisible"/>
+          <it.sephiroth.android.library.widget.HListView
+                            android:id="@+id/list6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:smoothScrollbar="true"
+                            />
+        </LinearLayout>
+       
+       
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+      
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin" >
+
+        <LinearLayout
+            android:id="@+id/layouttop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <EditText
+                android:id="@+id/face_name_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:ems="10"
+                android:hint="Name or Keyword(s)"
+                   android:drawableBottom="@drawable/faces_new_entry_line_active"
+                android:textColor="@color/Gray"
+                android:textColorHint="@color/Gray" >
+
+
+            </EditText>
+
+         
+        </LinearLayout>
+
+       <View
+            android:id="@+id/view_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/layouttop"
+            android:layout_marginBottom="5dp"
+          
+           />
+
+        <LinearLayout  
+    android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right"
+              android:layout_marginTop="4dp"
+            >
+    
+     <TextView
+       
+            android:id="@+id/face_male_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+ android:layout_gravity="bottom"
+ android:textColor="@color/Gray"
+            android:text="{Male}"
+           >
+        </TextView>
+        <View 
+               android:layout_width="20dp"
+            android:layout_height="wrap_content"/>
+          <TextView
+       
+            android:id="@+id/face_female_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+ android:layout_gravity="bottom"
+ android:textColor="@color/Gray"
+            android:text="{Female}" >
+        </TextView>
+</LinearLayout> 
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_layout2"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/layout"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray" />
+
+ 
+
+        <!-- Complete layout when , where, with,slice -->
+
+        <LinearLayout
+            android:id="@+id/complete_layout_wwws"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                 android:layout_below="@+id/view_layout2"
+            android:orientation="vertical" >
+   <LinearLayout
+                    android:id="@+id/description_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_layout4"
+                    android:gravity="left"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/description_plus_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/plus"
+                        android:text="when"
+                      />
+
+                    <TextView
+                        android:id="@+id/faces_description_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="description"
+                        android:textColor="@color/Gray"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+             <View
+
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/layout"
+  
+        android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:id="@+id/inner_description_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+             android:visibility="gone"
+              
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                 
+                     >
+
+                    <EditText
+                        android:id="@+id/description_editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:background="@null"
+                        android:ems="10"
+                        android:lines="5"
+                        android:gravity="top"
+                         android:hint="hair, face, style, etc..."
+                           android:paddingLeft="@dimen/left_inner_margin"
+                    android:paddingRight="@dimen/right_inner_margin"
+                        android:paddingBottom="2dp"
+                        
+                        android:textColor="@color/Gray"
+                        android:textColorHint="@color/Gray" >
+
+                    <!--   <requestFocus />  -->
+                    </EditText>
+  <View
+
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        
+  
+        android:background="@color/Green" />
+                </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/when_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                
+                android:gravity="left"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/when_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/plus"
+                    android:text="when"
+                    android:textSize="18sp" />
+
+                <TextView
+                        android:id="@+id/faces_when_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="when"
+                    android:textColor="@color/Gray"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_layout3"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/when_layout"
+                android:background="@android:color/darker_gray" />
+            <!-- includde Calender Layout begin  First Gone -->
+
+            <include
+                android:id="@+id/complete_calender_layout"
+                layout="@layout/activity_cal"
+                android:visibility="gone" />
+            <!-- includde Calender Layout end  First Gone -->
+
+            <LinearLayout
+                android:id="@+id/where_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_layout3"
+                android:gravity="left"
+                android:orientation="horizontal" >
+
+                <ImageView
+                     android:id="@+id/where_plus_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/plus"
+                    android:text="when"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/faces_where_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="where"
+                    android:textColor="@color/Gray"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_layout4"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/where_layout"
+                android:background="@android:color/darker_gray" />
+ <include
+                android:id="@+id/event_where"
+                layout="@layout/event_where_layout"
+                android:visibility="gone" />
+            
+
+           
+            
+            <LinearLayout
+                android:id="@+id/slice_layout"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/view_layout5"
+                android:gravity="left"
+                android:orientation="horizontal" >
+
+                <ImageView
+                             android:id="@+id/slice_plus_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/plus"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:id="@+id/faces_why_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="why"
+                    android:textColor="@color/Gray"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_layout6"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/slice_layout"
+                android:background="@android:color/darker_gray" />
+            <include
+                android:id="@+id/event_slice"
+                layout="@layout/event_slice_layout"
+                android:visibility="gone"
+                
+                />
+        </LinearLayout>
+        </LinearLayout> 
+    </ScrollView>
+
+    <!-- Bottom layout -->
+    <!-- Bottom layout -->
+    
+    <TextView
+    android:id="@+id/share_notes"
+    
+       android:gravity="center"
+           android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        
+
+ android:layout_marginBottom="5dp"
+ android:layout_gravity="bottom"
+ android:textColor="@color/Gray"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+ android:layout_above="@+id/view_layout7"
+ android:layout_toLeftOf="@+id/event_complete_text"
+
+            android:text="{Share}" 
+         >
+        </TextView>
+    
+    <TextView
+    android:id="@+id/event_complete_text"
+    
+       android:gravity="center"
+           android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        
+android:layout_marginLeft="8dp"
+ android:layout_marginBottom="5dp"
+ android:layout_gravity="bottom"
+ android:textColor="@color/Gray"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+ android:layout_above="@+id/view_layout7"
+ android:layout_toLeftOf="@+id/event_save_text"
+            android:text="{Complete}"
+         
+             >
+        </TextView>
+<TextView
+    android:id="@+id/event_save_text"
+    
+       android:gravity="center"
+              android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+ android:layout_marginRight="10dp"
+ android:layout_marginBottom="5dp"
+ android:layout_gravity="bottom"
+ android:textColor="@color/Gray"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+ android:layout_above="@+id/view_layout7"
+            android:text="{Save}" >
+        </TextView>
+
+    <View
+        android:id="@+id/view_layout7"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@+id/bottom_layout"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/activity_horizontal_margin" >
+
+        <ImageView
+         android:id="@+id/priority_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/event_importance_none" />
+
+        <ImageView
+                 android:id="@+id/alarm_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/event_reminder_active" />
+    </LinearLayout>
+    
+</RelativeLayout>

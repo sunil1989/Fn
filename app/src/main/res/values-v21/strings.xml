@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FN</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="title_activity_sign_in">SignInActivity</string>
+    <!-- Title Text For Login Page -->
+
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="update">Update</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="sign_in_using">Sign In Using</string>
+    <string name="sign_up_using">Sign Up Using</string>
+    <string name="create_account">Create Account</string>
+    <!-- Edit Text Hint For Login Page -->
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_event">EventActivity</string>
+    <string name="event_where">Enter Place</string>
+    <string name="event_with">Enter Name</string>
+    <string name="title_activity_email">EmailActivity</string>
+    <string name="title_activity_etc">EtcActivity</string>
+    <string name="title_activity_phone">PhoneActivity</string>
+    <string name="title_activity_faces">FacesActivity</string>
+    <string name="enter_address">Please Eneter Address:</string>
+    <string name="address">Address</string>
+    <string name="from_map">Map</string>
+    <string name="from_address">Address</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_current">CurrentActivity</string>
+    
+    <!-- app id for facebook -->
+    <string name="appid">381387278731006</string> 
+
+    
+    <!--date picker  -->
+
+   <string name="date_label_set">Press the button to set the date</string>
+   <string name="date_button_set">Set Date</string>
+   <string name="date_view_set">The Date is: </string>
+   <string name="date_selected"></string>
+</resources>

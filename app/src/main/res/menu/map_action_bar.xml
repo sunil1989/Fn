@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+     <item android:id="@+id/point_from_map"
+        android:title="@string/from_map"
+        android:showAsAction="always"/>
+     
+     <item android:id="@+id/point_from_address"
+        android:title="@string/from_address"
+        android:showAsAction="always"/>
+
+</menu>

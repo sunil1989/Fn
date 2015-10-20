@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/Green" />
+
+    <LinearLayout
+        android:id="@+id/with_complete_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+         android:focusable="true"
+    android:focusableInTouchMode="true"
+        android:paddingBottom="15dp" >
+
+        <TextView
+            android:id="@+id/contact_auto_complete"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:drawableBottom="@drawable/event_name_entry_inactive"
+            android:hint="@string/event_with"
+            android:paddingBottom="2dp"
+            android:paddingLeft="12dp"
+            android:textSize="17sp"
+            android:textColor="@color/Gray"
+            android:textColorHint="@color/Gray" />
+
+        <!--
+                     <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/Gray" />
+        -->
+
+        <ListView
+            android:id="@+id/mContact_Listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/with_complete_layout"
+        android:layout_marginTop="10dp"
+        android:background="@color/Green" />
+
+</RelativeLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+    
+     
+     
+       >
+ <LinearLayout
+          android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+     android:gravity="left"
+    android:paddingLeft="15dp"
+       android:paddingRight="15dp"
+       android:paddingTop="20dp"
+         >
+        
+          <TextView
+          android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:text="Every"
+       android:textColor="@color/Gray"
+       >
+
+       
+    </TextView>
+     
+    <EditText
+        android:id="@+id/every_day_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="6"
+      
+    
+        android:textColorHint="@color/Gray"
+        android:gravity="center"
+    
+        android:background="@null"
+            android:drawableBottom="@drawable/signin_username"
+         android:textColor="@color/Gray"
+            android:textSize="20sp"
+        android:inputType="number"
+     
+         >
+
+        <requestFocus />
+    </EditText>
+      <TextView
+          android:id="@+id/days_month_text"
+          android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:text="Day,s"
+       android:textColor="@color/Gray"
+        >
+
+       
+    </TextView>
+    </LinearLayout>
+    
+<LinearLayout
+           
+            android:id="@+id/date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             android:gravity="left"
+             android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+              android:paddingLeft="15dp"
+       android:paddingRight="15dp" >
+
+            
+
+            <TextView
+                android:id="@+id/date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Until"
+                  android:textSize="20sp"
+                android:textColor="@color/Gray"
+                />
+            <View   android:layout_width="5dp"
+        android:layout_height="0dp"/>
+            <EditText
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:hint="17-September-2015"
+        android:clickable="false"
+        android:focusable="false"
+        android:textColorHint="@color/Gray"
+        android:gravity="center"
+        android:background="@null"
+            android:drawableBottom="@drawable/signin_username"
+         android:textColor="@color/Gray"
+            android:textSize="20sp"
+        android:inputType="number"
+         >
+
+     
+        
+    </EditText>
+    <View   android:layout_width="10dp"
+        android:layout_height="0dp"/>
+             <ImageView
+                android:id="@+id/date_plus_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/dialog_calendar_icon_active" />
+        </LinearLayout>
+    <LinearLayout
+          android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+     android:weightSum="2"
+          android:paddingLeft="15dp"
+       android:paddingRight="15dp"
+       android:paddingBottom="20dp"
+         >
+         
+     <Button
+        android:id="@+id/set_cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+  android:layout_weight="1"
+        android:background="@drawable/sign_sky"
+        android:text="cancel"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/White" />
+     <View   android:layout_width="20dp"
+        android:layout_height="0dp"/>
+    <Button
+        android:id="@+id/set_day_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      
+     android:layout_weight="1"
+        android:background="@drawable/sign_sky"
+        android:text="set"
+        android:textSize="20sp"
+          
+        android:layout_marginTop="10dp"
+        android:textColor="@color/White" />
+    
+</LinearLayout>
+</LinearLayout>
+</LinearLayout>

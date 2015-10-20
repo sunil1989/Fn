@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.life_reminder">
+
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+
+
+    <!-- Internet Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+
+
+    <!-- Network State Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission  android:name="android.permission.CALL_PHONE"/>
+
+    <permission
+        android:name="com.life_reminder.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.life_reminder.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
+<!--
+    <uses-sdk tools:overrideLibrary="com.facebook, com.facebook"/>
+-->
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+
+    <application
+        android:name="multidex.Multi"
+        android:allowBackup="true"
+
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.life_reminder.SplashActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="t4jsample"
+                    android:scheme="oauth" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.life_reminder.SignUpActivity"
+            android:label="@string/title_activity_sign_up"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.life_reminder.SignInActivity"
+            android:label="@string/title_activity_sign_in"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.life_reminder.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyCustomTheme" >
+        </activity>
+        <activity
+            android:name="event.EventActivity"
+            android:label="@string/title_activity_event"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme" >
+        </activity>
+        <activity
+            android:name="email.EmailActivity"
+            android:label="@string/title_activity_email"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme"
+            >
+        </activity>
+        <activity
+            android:name="etc.NewEtcActivity"
+            android:label="@string/title_activity_etc"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme"
+            >
+            <!--   android:windowSoftInputMode="stateVisible|adjustResize" -->
+        </activity>
+        <activity
+            android:name="phone.PhoneActivity"
+            android:label="@string/title_activity_phone"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme"
+            >
+        </activity>
+        <activity
+            android:name="faces.FacesActivity"
+            android:label="@string/title_activity_faces"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme"
+            >
+        </activity>
+        <activity
+            android:name="fn.LifeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme"
+            >
+        </activity>
+        <activity
+            android:name="settings.SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme"
+            >
+        </activity>
+
+        <receiver android:name="alarm.StatusBar" >
+        </receiver>
+        <receiver android:name="alarm.CancelAlarmBroadcastReceiver" >
+        </receiver>
+        <activity android:name="adapter.ShowTaskDetails" >
+        </activity>
+        <activity
+            android:name="reminder.CreateGoogleMap"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCt_XL0cSkR1nHcItihh0V9Vh_q02b5rdI" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="search.SearchActivity"
+            android:label="@string/title_activity_search"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme" >
+        </activity>
+        <activity
+            android:name="search.CurrentActivity"
+            android:label="@string/title_activity_current"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme" >
+        </activity>
+
+        <activity
+            android:name="search.OldStuffActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme"
+            >
+        </activity>
+
+
+        <activity
+            android:name="search.CalenderHomeSearch"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme"
+            >
+        </activity>
+
+
+       <!-- <activity
+            android:name="linkedin.FacebookLoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.facebook.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
+
+        <!--<meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/appid" />
+-->
+        <activity
+            android:name="linkedin.GooglePlusLoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name="linkedin.TwitterLoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service android:name="sync.StartService"></service>
+
+       <!-- <activity
+            android:name="com.businesscard.scan.ResultsActivity"
+            >
+        </activity>-->
+
+
+
+
+        <activity android:name="camerawork.ImageCaptureActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="camerawork.ImageEditor"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+
+        <activity
+            android:name="fileexploarar.FileChooser"
+            android:label="Choose File"
+            android:theme="@android:style/Theme.Holo">
+            <action android:name="com.example.fileexplorer.FileChooser" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </activity>
+
+
+
+
+    </application>
+
+</manifest>

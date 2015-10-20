@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+      android:background="#FFFFFF"
+  
+    android:orientation="vertical" >
+     <!--  android:paddingRight="@dimen/activity_horizontal_margin" -->
+  <!--   -->
+      <ExpandableListView
+        android:paddingLeft="5dp"
+        android:id="@+id/expandableListView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+        android:divider="#78C854"
+        android:childDivider="#78C854"
+        android:dividerHeight="0.5dp"
+        android:groupIndicator="@drawable/group_indicator_selector" >
+    </ExpandableListView> 
+  <!--    android:divider="#A4C739" -->
+     <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_marginBottom="10dp"
+    android:background="@android:color/darker_gray"
+    android:layout_above="@+id/layout1"/>
+<LinearLayout 
+    android:id="@+id/layout1"
+       android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="right"
+       
+        android:orientation="horizontal"
+               android:paddingBottom="@dimen/activity_horizontal_margin"
+         android:paddingRight="@dimen/activity_horizontal_margin"
+    >
+   
+          <ImageView 
+              
+             
+                android:id="@+id/img2"
+                android:layout_height="wrap_content"
+                android:src="@drawable/home_search_icon"
+                android:layout_width="wrap_content"
+      
+                android:layout_marginRight="20dp"/>
+             <ImageView 
+              
+            
+                android:id="@+id/img3"
+                android:layout_height="wrap_content"
+                android:src="@drawable/home_setting_icon"
+                android:layout_width="wrap_content"/>
+    
+    
+</LinearLayout>
+
+          <ImageView 
+                
+                android:layout_alignParentBottom="true"
+                android:id="@+id/fn_plus_img"
+                android:layout_height="wrap_content"
+                android:src="@drawable/home_new_button"
+                android:layout_width="wrap_content"/>
+          
+    
+</RelativeLayout>

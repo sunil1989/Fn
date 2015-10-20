@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <color name="White">#FFFFFF</color>
+<!--     <color name="Green">#78C854</color> -->
+   <color name="Green">#6bc04b</color> 
+   <!--   <color name="DarkGreen">#4c9232</color>  -->
+<!--        <color name="DarkGreen">#35791c</color> -->
+        <color name="DarkGreen">#163308</color> 
+     
+  
+    <color name="Gray">#959595</color>
+        <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="symptom_color_selected">#003366</color>
+    <color name="reaction_color_selected">#003366</color>
+    <color name="static_text_color">#003366</color>
+    <color name="journal_entry_listitem_text_color">#003366</color>
+    <color name="note_text_disabled">#333333</color>
+    <color name="blue">#0000FF</color>
+    <color name="navy">#6699FF</color>
+    <color name="sky">#0099CC</color>
+    <color name="gray">#808080</color>
+    
+    <color name="lightgray">#e7e7e7</color>
+    <color name="calender_bg">#797979</color>
+      <color name="lightgray02">#bfbfbf</color>
+       
+     
+          <color name="search_text_color">#767676</color>
+    <color name="dark">#000015</color>
+    <color name="lightgreen">#336666</color>
+    <color name="orrange">#e33d1b</color>
+    <color name="darkorrange">#cc2303</color>
+    
+    
+      <color name="list_item_title">#fff</color>
+    <color name="list_background">#37474f</color>
+    <color name="list_background_pressed">#009688</color>
+    <color name="list_activated">#123456</color>
+    <color name="counter_text_bg">#626262</color>
+    <color name="counter_text_color">#c5c4c4</color>
+</resources>

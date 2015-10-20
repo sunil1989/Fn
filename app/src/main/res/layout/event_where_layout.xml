@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/Green" />
+
+    <LinearLayout
+        android:id="@+id/with_complete_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+       >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+           <place.CustomAutoCompleteTextView
+                android:id="@+id/atv_places"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableBottom="@drawable/event_name_entry_inactive"
+                android:hint="@string/event_where"
+                android:paddingBottom="2dp"
+                android:layout_marginLeft="12dp"
+                android:textColor="@color/Gray"
+                android:textColorHint="@color/Gray" >
+            </place.CustomAutoCompleteTextView>
+           <!--  <MultiAutoCompleteTextView
+                android:id="@+id/atv_places"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableBottom="@drawable/event_name_entry_inactive"
+                android:hint="@string/event_where"
+                android:paddingBottom="2dp"
+                android:textColor="@color/Gray"
+                android:textColorHint="@color/Gray" >
+            </MultiAutoCompleteTextView> -->
+
+            <ImageView
+                android:id="@+id/map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            
+                android:src="@android:drawable/ic_menu_myplaces"/>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/mListview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp" />
+
+        <LinearLayout
+            android:id="@+id/reminder_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mListview"
+            android:layout_gravity="left"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/auto_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:text="{auto send}"
+                android:textColor="@color/Gray"
+                android:textSize="14sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/remind_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:text="{remind me}"
+                android:textColor="@color/Gray"
+                android:textSize="14sp" >
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/with_complete_layout"
+        android:layout_marginTop="10dp"
+        android:background="@color/Green" />
+
+</RelativeLayout>
