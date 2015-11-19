@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.life_reminder.R;
 
@@ -23,9 +24,11 @@ public class AttachmentAdapter extends BaseAdapter {
     private LayoutInflater layoutInflater;
     private List<AttachData> all_data_list;
     ImageView iconImageView;
+    TextView mFileName;
     int pos;
     int targetWidth=140;
     int targetHeight=140;
+    String fileName;
     public AttachmentAdapter(Activity activity, List<AttachData> all_data_list) {
         super();
         this.activity = activity;
@@ -68,18 +71,21 @@ public class AttachmentAdapter extends BaseAdapter {
         }
         if (view == null) {
             view = layoutInflater
-                    .inflate(R.layout.horizontal_audio_item, null);
+                    .inflate(R.layout.attach_row, null);
         }
         iconImageView = (ImageView) view.findViewById(R.id.icon_img);
+        mFileName = (TextView) view.findViewById(R.id.filename);
 
         pos = position;
 
         String filepath = all_data_list.get(pos).getFilepath();
 
-        String fileName = all_data_list.get(pos).getFile();
+        fileName = all_data_list.get(pos).getFile();
+
+        //mFileName.setText("dssdffsd");
 
         //iconImageView.setImageResource(R.drawable.attachment);
-        System.out.println("========fileName=========="+fileName);
+        System.out.println("========fileName==========" + fileName);
 
         System.out.println("========filepath=========="+filepath);
         convert_graphic_hexagonal();
@@ -96,6 +102,7 @@ public class AttachmentAdapter extends BaseAdapter {
         Bitmap b = getHexagonShape(bitmap);
         // set image in imageview
         iconImageView.setImageBitmap(b);
+        mFileName.setText(fileName);
     }
 
     public Bitmap getHexagonShape(Bitmap scaleBitmapImage) {

@@ -123,10 +123,10 @@
             <it.sephiroth.android.library.widget.HListView
                 android:id="@+id/attach_ment"
                 android:layout_width="wrap_content"
-                android:layout_height="80dp"
+                android:layout_height="200dp"
                 android:smoothScrollbar="true"
                 android:drawSelectorOnTop="false"
-                android:listSelector="@android:color/white"
+
                 />
 
             <View android:layout_width="wrap_content"

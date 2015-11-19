@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="6"
+
+
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="@dimen/left_inner_margin"
+        android:paddingRight="@dimen/right_inner_margin">
+
+
+        <TextView
+            android:id="@+id/add_textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add"
+            android:textSize="30sp"
+            android:layout_marginTop="10dp" />
+
+        <ImageView
+            android:id="@+id/event_camera_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/etc_camera_icon_active1"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp" />
+
+        <ImageView
+            android:id="@+id/audio_imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/etc_audio_icon_active"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/audio_image_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+
+        android:layout_marginLeft="10dp">
+
+        <it.sephiroth.android.library.widget.HListView
+            android:id="@+id/list6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:smoothScrollbar="true"
+            android:drawSelectorOnTop="false"
+            android:listSelector="@android:color/white" />
+
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+
+            />
+
+        <it.sephiroth.android.library.widget.HListView
+            android:id="@+id/audio_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:smoothScrollbar="true"
+            android:drawSelectorOnTop="false"
+            android:listSelector="@android:color/white" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/linearLayout1"
+
+
+        android:background="@color/Green" />
+</LinearLayout>

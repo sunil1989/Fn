@@ -169,6 +169,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:src="@drawable/ic_close"
+            android:visibility="gone"
             android:background="@drawable/button_selector"/>
 
         <ImageButton

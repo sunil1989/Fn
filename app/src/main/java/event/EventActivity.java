@@ -223,7 +223,7 @@ public class EventActivity extends FragmentActivity implements OnClickListener,
 	String final_select_am_pm, final_repeat, final_with, final_where,
 			final_repeat_every_day_month;
 	ArrayList<String> tag_ArrayList = new ArrayList<String>();
-	ArrayList<PhotoData> img_ArrayList;
+	public static ArrayList<PhotoData> img_ArrayList;
 	ArrayList<AudioData> audio_ArrayList;
 	/* Slice */
 
@@ -1240,7 +1240,7 @@ public class EventActivity extends FragmentActivity implements OnClickListener,
 		
 					if (img_ArrayList != null) {
 						for (int i = 0; i < img_ArrayList.size(); i++) {
-							
+
 							//System.out.println("=========image id======sunil========="+img_ArrayList.get(i).getId());
 						System.out.println("=========image photo=====sunil=========="+img_ArrayList.get(i).getPhoto());
 							
@@ -3447,7 +3447,7 @@ public class EventActivity extends FragmentActivity implements OnClickListener,
 	public void addimages() {
 
      System.out.println("=====imagepath============="+img_path);
-		
+
 		img_ArrayList.add(new PhotoData(img_path));
 
 		

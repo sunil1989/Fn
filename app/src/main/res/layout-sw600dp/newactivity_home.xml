@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+    <!-- <ScrollView
+        android:layout_alignParentTop="true"
+               android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/view_bottom"
+            > -->
+    <LinearLayout
+        android:layout_alignParentTop="true"
+        android:id="@+id/complete_layout_wwws"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view_bottom"
+        android:layout_below="@+id/view_layout2"
+        android:orientation="vertical">
+
+        <!-- android:divider="#A4C739" -->
+
+        <LinearLayout
+            android:id="@+id/today_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_layout3"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/today_plus_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/plus"
+                android:text="when"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/today_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Today"
+                android:textColor="@color/Gray"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_layout4"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@android:color/darker_gray" />
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/today_include_layout"
+            layout="@layout/include_today_layout"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/tomorrow_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/tomorrow_plus_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/plus"
+                android:text="when"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/tomorrow_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Tomorrow"
+                android:textColor="@color/Gray"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_layout5"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@android:color/darker_gray" />
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tomorrow_include_layout"
+            layout="@layout/include_tomorrow_layout"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/week_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/week_plus_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/plus"
+                android:text="when"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/week_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="This Week"
+                android:textColor="@color/Gray"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@android:color/darker_gray" />
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/week_include_layout"
+            layout="@layout/include_week_layout"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:layout_above="@+id/view_bottom"
+            android:id="@+id/date_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:padding="30dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/date_plus_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="@drawable/etc_calendar_icon_active" />
+
+            <TextView
+                android:id="@+id/date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Select Date"
+                android:paddingLeft="30dp"
+                android:textColor="@color/Gray"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@android:color/darker_gray" />
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/homecal_include_layout"
+            layout="@layout/home_cal"
+            android:visibility="gone" />
+
+        <!-- all -->
+        <LinearLayout
+            android:id="@+id/all_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/all_plus_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/plus"
+                android:text="when" />
+
+            <TextView
+                android:id="@+id/all_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="All"
+                android:textColor="@color/Gray"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@android:color/darker_gray" />
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/all_include_layout"
+            layout="@layout/include_all_layout"
+            android:visibility="gone" />
+    </LinearLayout>
+    <!-- </ScrollView> -->
+    <View
+        android:id="@+id/view_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/layout1"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:paddingBottom="25dp"
+        android:paddingRight="25dp">
+
+        <ImageView
+            android:id="@+id/search_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/home_search_icon" />
+
+        <ImageView
+            android:id="@+id/setting_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/home_setting_icon" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/fn_plus_img"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/home_new_button" />
+
+</RelativeLayout>

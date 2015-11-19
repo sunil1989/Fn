@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/email_phone_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Do you want to send or Edit Mail"
+                android:textColor="@color/Gray"
+                android:textSize="50sp"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="8"
+            android:gravity="center"
+            android:layout_marginTop="45dp"
+
+
+            >
+
+            <Button
+                android:id="@+id/send_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+
+
+                android:padding="10dp"
+                android:text="Send"
+                android:background="@drawable/sign_green"
+                android:textColor="@color/White"
+                android:textSize="40sp" />
+
+            <View
+                android:layout_width="15dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/snooze_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:background="@drawable/sign_green"
+                android:text="Snooze"
+                android:textColor="@color/White"
+                android:textSize="40sp" />
+
+            <View
+                android:layout_width="15dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/edit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:background="@drawable/sign_green"
+                android:text="Edit"
+                android:textColor="@color/White"
+                android:textSize="40sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -2193,6 +2193,7 @@ public class LifeActivity extends Activity implements OnClickListener,
 				// TODO Auto-generated method stub
 				importance_dialog.dismiss();
 				importance = "Low";
+
 				priority_ImageView.setImageResource(R.drawable.importance_one);
 			}
 		});

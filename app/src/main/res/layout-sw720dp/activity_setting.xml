@@ -1,0 +1,252 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+
+    tools:context="com.life.event.EmailActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_above="@+id/view_layout7"
+        android:layout_alignParentTop="true"
+        android:id="@+id/scrollView"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/sync_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_layout4"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/sync_plus_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/plus"
+                    android:text="when" />
+
+                <TextView
+                    android:id="@+id/sync_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="sync"
+                    android:textColor="@color/Gray"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:id="@+id/profile_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_layout5"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/profile_plus_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/plus" />
+
+                <TextView
+                    android:id="@+id/profile_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="profile"
+                    android:textColor="@color/Gray"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/darker_gray" />
+            <!-- includde profile Layout begin  First Gone -->
+
+            <include
+                android:id="@+id/include_profile"
+                layout="@layout/include_profile"
+                android:visibility="gone" />
+            <!-- includde profile Layout end  First Gone -->
+
+            <LinearLayout
+                android:id="@+id/prefrences_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/prefrences_plus_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/plus"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:id="@+id/prefrences_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="preferences"
+                    android:textColor="@color/Gray"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/darker_gray" />
+
+
+            <include
+                android:id="@+id/include_prefrence"
+                layout="@layout/setting_prefrences"
+                android:visibility="gone" />
+
+            <!-- slice layout start -->
+            <LinearLayout
+                android:id="@+id/password_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/password_plus_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/plus"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:id="@+id/password_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="password"
+                    android:textColor="@color/Gray"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/darker_gray" />
+
+
+            <!-- includde password Layout begin  First Gone -->
+
+            <include
+                android:id="@+id/include_password"
+                layout="@layout/include_password"
+                android:visibility="gone" />
+            <!-- includde password Layout end  First Gone -->
+            <LinearLayout
+                android:id="@+id/sound_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/sound_plus_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/plus"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:id="@+id/sound_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="sound"
+                    android:textColor="@color/Gray"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- includde sound Layout begin  First Gone -->
+
+            <include
+                android:id="@+id/include_sound"
+                layout="@layout/inclulde_sound"
+                android:visibility="gone" />
+            <!-- includde sound Layout end  First Gone -->
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <!-- Bottom layout -->
+    <!-- Bottom layout -->
+
+
+    <View
+        android:id="@+id/view_layout7"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@+id/bottom_layout"
+        android:background="@android:color/darker_gray" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"
+
+        android:orientation="horizontal">
+
+
+        <Button
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/sync_evernote"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/sync"
+
+            />
+
+        <ImageView
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/alarm_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/home_setting_icon" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

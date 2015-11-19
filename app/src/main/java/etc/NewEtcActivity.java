@@ -3087,7 +3087,7 @@ if(businesscardmenu==1){
                 String fullpath=GetPath+"/"+curFileName;
                 System.out.println("==========fullpath==========="+fullpath);
 
-                attachData.add(new AttachData(fullpath,GetPath));
+				attachData.add(new AttachData(fullpath, curFileName));
 
                 AttachmentAdapter  horizontal_Adapter = new AttachmentAdapter(this, attachData);
                 attach_ment.setAdapter(horizontal_Adapter);

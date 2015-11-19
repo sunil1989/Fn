@@ -7,10 +7,10 @@ android {
         exclude 'META-INF/NOTICE.txt'
     }
 
-    dexOptions {
+    /*dexOptions {
         incremental true
-        javaMaxHeapSize "2048M"
-    }
+        javaMaxHeapSize "1024MB"
+    }*/
 
     productFlavors {
         // Define separate dev and prod product flavors.

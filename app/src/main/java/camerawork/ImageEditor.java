@@ -33,6 +33,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import custom.CustomProgressDialog;
+import event.EventActivity;
 import scan.AsyncProcessTask;
 
 /**
@@ -180,6 +181,9 @@ public class ImageEditor extends Activity implements View.OnClickListener, Popup
                 llCropped.setVisibility(View.VISIBLE);
                 break;
             case R.id.closeBt:
+                if (EventActivity.img_ArrayList != null) {
+                    EventActivity.img_ArrayList.clear();
+                }
                 finish();
                 break;
             case R.id.rotateLeftBt:
@@ -326,6 +330,7 @@ public class ImageEditor extends Activity implements View.OnClickListener, Popup
         cropImageView.setVisibility(View.GONE);
         editImage.setVisibility(View.VISIBLE);
         editImage.setImageBitmap(croppedImageBitmap);
+        // closeBt.setVisibility(View.GONE);
     }
 
 

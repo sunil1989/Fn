@@ -22,7 +22,7 @@
             android:layout_marginTop="30dp" >
 
             <ImageView
-                android:id="@+id/imageView1"
+                android:id="@+id/dialog_event_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingRight="10dp"
@@ -33,10 +33,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:paddingRight="40dp"
             android:layout_marginTop="34dp" >
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/dialog_life_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -44,11 +45,12 @@
                 android:src="@drawable/new_life_icon" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/dialog_email_img"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="80dp"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="95dp"
+
                 android:src="@drawable/new_email_icon" />
         </RelativeLayout>
 
@@ -56,22 +58,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="60dp" >
+            android:layout_marginTop="65dp">
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/dialog_etc_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="110dp"
+                android:layout_marginLeft="140dp"
                 android:src="@drawable/new_etc_icon" />
 
             <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/dialog_phone_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="105dp"
+                android:layout_marginRight="133dp"
                 android:src="@drawable/new_aphone_icon" />
         </RelativeLayout>
 
@@ -81,10 +83,11 @@
             android:layout_gravity="center" >
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/dialog_faces_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingRight="10dp"
+                android:paddingRight="0dp"
+                android:paddingLeft="20dp"
                 android:src="@drawable/new_faces_icon" />
         </LinearLayout>
     </LinearLayout>

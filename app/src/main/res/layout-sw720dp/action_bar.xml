@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+
+    android:orientation="vertical"
+
+    >
+
+
+    <!-- <ImageView
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:layout_alignParentLeft="true"
+   android:layout_centerVertical="true"
+
+android:paddingRight="12dp"
+   android:src="@drawable/event_fn_back_icon" /> -->
+
+    <TextView
+        android:id="@+id/action_bar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerInParent="true"
+        android:paddingRight="0dp"
+
+        android:text="event"
+
+        android:textColor="@color/Gray"
+        android:textSize="40sp" />
+
+    <ImageView
+        android:id="@+id/event_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+
+        android:paddingRight="20dp"
+        android:src="@drawable/event_title_icon" />
+    <!--    android:src="@drawable/abc_btn_check_material" -->
+
+
+</RelativeLayout>

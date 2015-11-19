@@ -1,0 +1,267 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.life.event.EmailActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/event_save_text"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/remember_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_layout4"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/remember_plus_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/plus"
+                    android:text="when" />
+
+                <TextView
+                    android:id="@+id/life_remember_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="remember this..."
+                    android:textColor="@color/Gray"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <View
+
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:id="@+id/inner_remember_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:visibility="gone"
+
+
+                >
+
+                <View
+
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/Green" />
+
+                <EditText
+
+                    android:id="@+id/remember_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/left_inner_margin"
+                    android:textSize="30sp"
+                    android:layout_marginRight="@dimen/right_inner_margin"
+                    android:layout_marginTop="@dimen/left_inner_margin"
+                    android:background="@null"
+                    android:drawableBottom="@drawable/event_name_entry_inactive"
+                    android:ems="10"
+                    android:hint="Enter text"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/Gray"
+                    android:textColorHint="@color/Gray">
+
+
+                </EditText>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@color/Green" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/this_way_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_layout5"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/thisway_plus_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/plus"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:id="@+id/life_thisway_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="this way"
+                    android:textColor="@color/Gray"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <View
+
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+
+                android:background="@android:color/darker_gray" />
+
+            <include
+                android:id="@+id/include_life_this_way"
+                layout="@layout/include_this_way"
+                android:visibility="gone"
+
+                />
+
+            <LinearLayout
+                android:id="@+id/recall_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="left"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/recall_plus_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/plus"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:id="@+id/life_recall_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="recall by"
+                    android:textColor="@color/Gray"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <View
+
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+
+                android:background="@android:color/darker_gray" />
+
+            <include
+                android:id="@+id/include_life_recall"
+                layout="@layout/event_slice_layout"
+                android:visibility="gone"
+
+                />
+            <!--slice layout start  -->
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom layout -->
+    <!-- Bottom layout -->
+
+    <TextView
+        android:id="@+id/share_notes"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view_layout7"
+
+
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="5dp"
+        android:layout_toLeftOf="@+id/event_complete_text"
+        android:gravity="center"
+        android:text="{Share}"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/Gray"
+        android:textSize="35sp"></TextView>
+
+    <TextView
+        android:id="@+id/event_complete_text"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view_layout7"
+        android:textSize="35sp"
+
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="5dp"
+        android:layout_toLeftOf="@+id/event_save_text"
+        android:gravity="center"
+        android:text="{Complete}"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/Gray"
+        android:visibility="gone"></TextView>
+
+    <TextView
+        android:id="@+id/event_save_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view_layout7"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="{Save}"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/Gray"
+        android:textSize="35sp"></TextView>
+
+    <View
+        android:id="@+id/view_layout7"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@+id/bottom_layout"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"
+        android:gravity="right"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <ImageView
+            android:id="@+id/priority_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/event_importance_none" />
+
+        <ImageView
+            android:id="@+id/alarm_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/event_reminder_active" />
+    </LinearLayout>
+
+</RelativeLayout>
